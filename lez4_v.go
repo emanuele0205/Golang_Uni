@@ -3,27 +3,39 @@ positivo n e stampa una lettera 'V' di asterischi di
 altezza n.
 */
 
-package main 
-import "fmt"
-func main(){
+package main
 
-	var n,h int 
-	fmt.Println("inserire altezza n")
+import (
+	"fmt"
+)
+
+func main() {
+	var n int
+	s := " "
+
 	fmt.Scan(&n)
-h=n
-for j:=1;j<n;j++{
-	for t := 0; t < j; t++ {
-		fmt.Print(" ")
+	for i := 1; i < n; i++ {
+		fmt.Print(s, "*")
+		for j := i; j < n; j++ {
+			if j == n-1 {
+				fmt.Print(" ")
+			} else {
+				fmt.Print("  ")
+			}
+
+		}
+
+		fmt.Print("*")
+		fmt.Println()
+		s += " "
 	}
-	fmt.Print("*")
-	for t:=0;t<h;t++{
-		fmt.Print(" ")
+	for z := 0; z <= n; z++ {
+		if z == n {
+			fmt.Println("*")
+		} else {
+			fmt.Print(" ")
+		}
+
 	}
-	fmt.Println("*")
-	h=h-2
-}
-for k:=0;k<n;k++{
-	fmt.Print(" ")
-}
-fmt.Println("*")
+
 }
